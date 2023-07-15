@@ -38,11 +38,11 @@
           headers: { Authorization: getBearerToken() },
         };
 
-        const baseUrl = '/v3/api-docs';
+        const baseUrl = '/jhipster-registry/v3/api-docs';
         let urls;
 
         if (!urls || urls.length === 0) {
-          const response = await axios.get('/management/jhiopenapigroups', axiosConfig);
+          const response = await axios.get('/jhipster-registry/management/jhiopenapigroups', axiosConfig);
           if (Array.isArray(response.data)) {
             urls = response.data.map(({ group, description }) => ({ name: description, url: `${baseUrl}/${group}` }));
           } else {
