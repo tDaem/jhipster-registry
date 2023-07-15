@@ -174,7 +174,7 @@ server:
     session:
       cookie:
         http-only: true
-    context-path: /jhpster-registry
+    context-path: /jhipster-registry
 
 springdoc:
   show-actuator: true
